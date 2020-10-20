@@ -1,0 +1,38 @@
+.MainImageContainer{
+    //background: lightgray;
+    height: 100%;
+    width: 100%;
+}  
+
+.Image1{
+    height: 137px;
+    width: 173px;
+    //border: 1px solid #000;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+.Image2{
+    height: 137px;
+    width: 173px;
+    //border: 1px solid #000;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+.Image3{
+    height: 137px;
+    width: 173px;
+    //border: 1px solid #000;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+.ImageContainer{
+    display: flex;
+    margin-left: 30%;
+}
+
