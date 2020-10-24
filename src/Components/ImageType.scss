@@ -2,6 +2,8 @@
     //background: lightgray;
     height: 40%;
     width: 100%;
+    display : flex;
+    justify-content: center
 }  
 
 .Image1{
@@ -16,8 +18,8 @@
 .LengthOverOn{
     height: 137px;
     width: 173px;
-    //border: 1px solid #000;
-    border-color: #0EC098;
+    border: 1px solid #0EC098;
+    //border-color: solid #0EC098 ;
     margin: 10px 15px 15px 15px;
     border-radius: 5%;
     background-color: #e0faf3;
@@ -70,7 +72,7 @@
 
 .ImageContainer{
     display: flex;
-    margin-left: 30%;
+    margin-left: 0%;
 }
 
 .Length1{

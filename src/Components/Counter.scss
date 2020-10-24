@@ -2,7 +2,7 @@
     //border: 1px solid #000;
     height : 100px;
     width: 19%;
-    margin: 0 15px 15px 30%;
+    margin: 0 15px 15px 0%;
     border-radius: 5px;
     background-color: #fff;
 }
@@ -16,8 +16,30 @@
     background-color: #fff;
 }
 
-.MainCounterContainer{
+.CounterContainer{
+    margin: 0% 0% 0% 0%;
     display: flex;
+    justify-content: center
+}
+
+.MainCounterContainer{
+    margin: 05% 0% 0% 0%;
+    //display: flex;
+    justify-content: center
+}
+
+.CounterTitle{
+    display: flex;
+    justify-content: space-around ;
+    //justify-content: center;
+}
+
+.From{
+    margin-left: 20%;
+}
+
+.To{
+    margin-right: 39%;
 }
 
 .FirstInput{

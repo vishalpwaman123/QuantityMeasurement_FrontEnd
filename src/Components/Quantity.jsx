@@ -7,7 +7,7 @@ export default class Quantity extends React.Component {
 
     constructor(props) {
         super(props);
-        
+
     }
 
     render() {
@@ -24,8 +24,10 @@ export default class Quantity extends React.Component {
                     <div className="ImageTitle">
                         <div className="ChooseType">CHOOSE TYPE</div>
                     </div>
-                    <ImageType />
-                    <Counter />
+                    <div className="Selector">
+                        <ImageType />
+                        <Counter />
+                    </div>
                 </div>
             </div>
         )
