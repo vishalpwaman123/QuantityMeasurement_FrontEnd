@@ -1,6 +1,6 @@
 .MainImageContainer{
     //background: lightgray;
-    height: 100%;
+    height: 40%;
     width: 100%;
 }  
 
@@ -13,6 +13,19 @@
     background-color: #fff;
 }
 
+.LengthOverOn{
+    height: 137px;
+    width: 173px;
+    //border: 1px solid #000;
+    border-color: #0EC098;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    background-color: #e0faf3;
+    border-radius: 7px;
+    box-sizing: border-box;
+    
+}
+
 .Image2{
     height: 137px;
     width: 173px;
@@ -20,6 +33,18 @@
     margin: 10px 15px 15px 15px;
     border-radius: 5%;
     background-color: #fff;
+}
+
+.TempOverOn{
+    height: 137px;
+    width: 173px;
+    border: 1px solid #FD5160;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    //background-color: #fff;
+    background-color: #f8dfe2;
+    border-radius: 7px;
+    box-sizing: border-box;
 }
 
 .Image3{
@@ -31,8 +56,62 @@
     background-color: #fff;
 }
 
+.VolumeOverOn{
+    height: 137px;
+    width: 173px;
+    border: 1px solid #7224FF;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    //background-color: #fff;
+    background-color: #dfd3f8;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
 .ImageContainer{
     display: flex;
     margin-left: 30%;
 }
 
+.Length1{
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.Temp1{
+    margin-top: 20%;
+    height:38%;
+    margin-bottom: 3%;
+}
+
+.Volume1{
+    margin-top: 20%;
+    margin-bottom: 5%;
+}
+
+.Length{
+    color: lightgray;
+}
+
+.Temperature{
+    color: lightgray;
+}
+
+.Volume{
+    color: lightgray;
+}
+
+.LengthColor{
+    font-weight: 500;
+    color: #0EC098;
+}
+
+.TemperatureColor{
+    font-weight: 500;
+    color: #FD5160;
+}
+
+.VolumeColor{
+    font-weight: 500;
+    color: #7224FF;
+}

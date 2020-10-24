@@ -1,0 +1,47 @@
+.FromContainer{
+    //border: 1px solid #000;
+    height : 100px;
+    width: 19%;
+    margin: 0 15px 15px 30%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.ToContainer {
+    //border: 1px solid #000;
+    height : 100px;
+    width: 19%;
+    margin: 0 15px 15px 15px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.MainCounterContainer{
+    display: flex;
+}
+
+.FirstInput{
+    width: 100%;
+    height: 50px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+.SecondInput{
+    width: 100%;
+    height: 50px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+.FirstChoose{
+    width: 100%;
+    height: 50px;
+    border: 1px solid lightgray;
+}
+
+.SecondChoose{
+    width: 100%;
+    height: 50px;
+    border: 1px solid lightgray;
+}

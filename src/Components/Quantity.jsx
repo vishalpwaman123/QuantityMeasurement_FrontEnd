@@ -1,8 +1,14 @@
 import React from 'react';
 import './Quantity.scss'
 import ImageType from '../Components/ImageType'
+import Counter from '../Components/Counter'
 
 export default class Quantity extends React.Component {
+
+    constructor(props) {
+        super(props);
+        
+    }
 
     render() {
         return (
@@ -15,10 +21,11 @@ export default class Quantity extends React.Component {
                     <div className="subTitle">Welcome To Quantity Measurement</div>
                 </div>
                 <div className="SelectorSection">
-                <div className="ImageTitle">
+                    <div className="ImageTitle">
                         <div className="ChooseType">CHOOSE TYPE</div>
                     </div>
-                <ImageType/>
+                    <ImageType />
+                    <Counter />
                 </div>
             </div>
         )
