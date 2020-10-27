@@ -7,3 +7,5 @@ export {temperatureColorToggle} from './Quantity/QuantityAction';
 export {lengthColorOffToggle} from './Quantity/QuantityAction';
 export {volumeColorOffToggle} from './Quantity/QuantityAction';
 export {temperatureColorOffToggle} from './Quantity/QuantityAction';
+export { FirstFunction } from './Quantity/QuantityAction';
+export { SecondFunction } from './Quantity/QuantityAction';

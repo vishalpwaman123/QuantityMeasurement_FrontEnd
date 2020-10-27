@@ -19,13 +19,8 @@ import { temperatureColorOffToggle } from '../Redux';
 
 class ImageType extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
-        console.log(" Status :",this.props.lengthColorToggle , this.props.lengthStatus);
+        //console.log(" Status :",this.props.lengthColorToggle , this.props.lengthStatus);
         return (
             <div className="MainImageContainer">
                 <div className="MainBlock">

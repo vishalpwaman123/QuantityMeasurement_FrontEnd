@@ -1,14 +1,16 @@
-import { volumeStatus } from './QuantityAction'
+
 import { LENGTH } from './QuantityType'
 import { VOLUME } from './QuantityType'
 import { TEMPERATURE } from './QuantityType'
+import { FIRSTFUNCTION } from './QuantityType'
+import { SECONDFUNCTION } from './QuantityType'
 import { LENGTHTOGGLE } from './QuantityType'
 import { VOLUMETOGGLE } from './QuantityType'
 import { TEMPERATURETOGGLE } from './QuantityType'
 import { LENGTHTOGGLEOFF } from './QuantityType'
 import { VOLUMETOGGLEOFF } from './QuantityType'
 import { TEMPERATURETOGGLEOFF } from './QuantityType'
-
+ 
 const initialState = {
     lengthStatus: true,
     volumeStatus: false,
@@ -16,124 +18,140 @@ const initialState = {
     lengthColorToggle: false,
     volumeColorToggle: false,
     temperatureColorToggle: false,
-
+    FirstInput : 1,
+    SecondInput : 1,
+    FirstValue : 'Inch',
+    SecondValue : 'Inch',
+    unit1: ['Inch', 'Feet', 'Yard', 'Centimeter'],
+    unit2: ['Celsius', 'Fahrenheit','Kelvin'],
+    unit3: ['Liter', 'Gallon', 'MilliLiter'],
+    options : ['Inch', 'Feet', 'Yard', 'Centimeter'],
+    measurementType : ''
 }
-
+ 
 const quantityReducer = (state = initialState, action) => {
-
-    //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
 
     switch (action.type) {
 
         case LENGTH:
-            //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
             return {
                 ...state,
+                SecondInput : 1,
+                FirstValue : 'Inch',
+                SecondValue : 'Inch',
                 lengthStatus: !state.lengthStatus,
                 volumeStatus: false,
                 temperatureStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
-
+                options : state.unit1,
+                measurementType : 'length',
             }
 
         case VOLUME:
-            //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
             return {
                 ...state,
+                SecondInput : 1,
+                FirstValue : 'Liter',
+                SecondValue : 'Liter',
                 volumeStatus: !state.volumeStatus,
                 lengthStatus: false,
                 temperatureStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
-
+                options : state.unit3,
+                measurementType : 'volume',
             }
 
         case TEMPERATURE:
-            //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
             return {
                 ...state,
+                SecondInput : 1,
+                FirstValue : 'Celsius',
+                SecondValue : 'Celsius',
                 temperatureStatus: !state.temperatureStatus,
                 lengthStatus: false,
                 volumeStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
+                options : state.unit2,
+                measurementType : 'temperature',
             }
 
         case LENGTHTOGGLE:
-            //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
             return {
                 ...state,
-                // temperatureStatus: false ,
-                // lengthStatus: false,
-                // volumeStatus: false,
                 lengthColorToggle: true,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
             }
 
         case VOLUMETOGGLE:
-            //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
             return {
                 ...state,
-                // temperatureStatus: false,
-                // lengthStatus: false,
-                // volumeStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: true,
                 temperatureColorToggle: false,
             }
 
         case TEMPERATURETOGGLE:
-            //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
             return {
                 ...state,
-                // temperatureStatus: false,
-                // lengthStatus: false,
-                // volumeStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: true,
             }
 
             case LENGTHTOGGLEOFF:
-                //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
                 return {
                     ...state,
-                    // temperatureStatus: false ,
-                    // lengthStatus: false,
-                    // volumeStatus: false,
                     lengthColorToggle: false,
                     volumeColorToggle: false,
                     temperatureColorToggle: false,
                 }
     
             case VOLUMETOGGLEOFF:
-                //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
                 return {
                     ...state,
-                    // temperatureStatus: false,
-                    // lengthStatus: false,
-                    // volumeStatus: false,
+
                     lengthColorToggle: false,
                     volumeColorToggle: false,
                     temperatureColorToggle: false,
                 }
     
             case TEMPERATURETOGGLEOFF:
-                //console.log(state.lengthStatus, state.volumeStatus, state.temperatureStatus);
+
                 return {
                     ...state,
-                    // temperatureStatus: false,
-                    // lengthStatus: false,
-                    // volumeStatus: false,
+
                     lengthColorToggle: false,
                     volumeColorToggle: false,
                     temperatureColorToggle: false,
                 }
+
+             case FIRSTFUNCTION :
+                 return {
+                     ...state,
+                    FirstValue : action.values,
+                 }   
+
+             case SECONDFUNCTION :
+                    return {
+                        ...state,
+                        SecondValue : action.values
+                    }   
+                    
 
         default: return state;
 

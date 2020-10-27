@@ -1,13 +1,15 @@
 import {LENGTH} from './QuantityType'
 import {VOLUME} from './QuantityType'
 import {TEMPERATURE} from './QuantityType'
+import {FIRSTFUNCTION} from './QuantityType'
+import {SECONDFUNCTION} from './QuantityType'
 import {LENGTHTOGGLE} from './QuantityType'
 import {VOLUMETOGGLE} from './QuantityType'
 import {TEMPERATURETOGGLE} from './QuantityType'
 import {LENGTHTOGGLEOFF} from './QuantityType'
 import {VOLUMETOGGLEOFF} from './QuantityType'
 import {TEMPERATURETOGGLEOFF} from './QuantityType'
-
+ 
 export  const legthStatus = () => {
     return {
         type : LENGTH
@@ -25,6 +27,21 @@ export  const temperatureStatus = () => {
         type : TEMPERATURE
     }
 }
+
+export  const FirstFunction = (value) => {
+    return {
+        type : FIRSTFUNCTION,
+        values : value 
+    }
+}
+
+export  const SecondFunction = (value) => {
+    return {
+        type : SECONDFUNCTION,
+        values : value 
+    }
+}
+
 
 export  const lengthColorToggle = () => {
     return {
