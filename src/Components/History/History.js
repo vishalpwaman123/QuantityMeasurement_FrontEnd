@@ -46,8 +46,8 @@ export default function History(props) {
             </div>
             <div className="HeaderTitle">
                 <div className="Index">Index No</div>
-                <div className="MeasurementType">MeasurementType</div>
-                <div className="conversionType">ConversionType</div>
+                <div className="MeasurementType">Measurement Type</div>
+                <div className="conversionType">Conversion Type</div>
                 <div className="InputNumber">Input Number</div>
                 <div className="Result">Result</div>
             </div>

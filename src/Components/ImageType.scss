@@ -21,10 +21,31 @@
     border: 1px solid #0EC098;
     //border-color: solid #0EC098 ;
     margin: 10px 15px 15px 15px;
-    border-radius: 5%;
+    border-radius: 15%;
     background-color: #e0faf3;
-    border-radius: 7px;
+    //border-radius: 7px;
     box-sizing: border-box;
+    animation-name: TempAnimation;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes TempAnimation {
+    from{
+        border-radius: 0%;
+    }
+
+    to{
+        border-radius: 15%;
+    }
+    
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
     
 }
 
@@ -42,11 +63,35 @@
     width: 173px;
     border: 1px solid #FD5160;
     margin: 10px 15px 15px 15px;
-    border-radius: 5%;
+    border-radius: 15%;
     //background-color: #fff;
     background-color: #f8dfe2;
-    border-radius: 7px;
+    //border-radius: 7px;
     box-sizing: border-box;
+    animation-name: TempAnimation;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes TempAnimation {
+    from{
+        border-radius: 0%;
+    }
+
+    to{
+        border-radius: 15%;
+    }
+    
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    // 100% {
+    //     transform: rotateY(0deg);
+    // }
 }
 
 .Image3{
@@ -54,7 +99,7 @@
     width: 173px;
     //border: 1px solid #000;
     margin: 10px 15px 15px 15px;
-    border-radius: 5%;
+    //border-radius: 5%;
     background-color: #fff;
 }
 
@@ -63,11 +108,34 @@
     width: 173px;
     border: 1px solid #7224FF;
     margin: 10px 15px 15px 15px;
-    border-radius: 5%;
+    border-radius: 15%;
     //background-color: #fff;
     background-color: #dfd3f8;
-    border-radius: 7px;
+    //border-radius: 7px;
     box-sizing: border-box;
+    animation-name: VolumeAnimation;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes VolumeAnimation {
+    from{
+        border-radius: 0%;
+    }
+
+    to{
+        border-radius: 15%;
+    }
+    
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
 }
 
 .ImageContainer{
@@ -116,4 +184,52 @@
 .VolumeColor{
     font-weight: 500;
     color: #7224FF;
+}
+
+@media only screen and (max-width: 580px) {
+    .ImageContainer{
+        //display: flex;
+        flex-direction: column; 
+    }
+
+    .Image1{
+        height: 100px;
+        width: 100px;
+    }
+
+    .Image2{
+        height: 100px;
+        width: 100px;
+    }
+
+    .Image3{
+        height: 100px;
+        width: 100px;
+    }
+
+    .LengthOverOn {
+        height: 100px;
+        width: 100px;
+
+    }
+
+    .TempOverOn{
+            height: 100px;
+            width: 100px;
+    }
+
+    .VolumeOverOn{
+        height: 100px;
+        width: 100px;
+    }
+
+    .TemperatureColor{
+        // font-size: 9%;
+        // font-weight: 400;
+        // margin-bottom: 2%;
+    }
+
+    .Temp1{
+        margin-top: 12%;
+    }
 }

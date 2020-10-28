@@ -26,52 +26,52 @@ class ImageType extends React.Component {
                 <div className="MainBlock">
 
                     <div className="ImageContainer">
-                        <div className={ (this.props.lengthColorToggle || this.props.lengthStatus) ? "LengthOverOn" : "Image1" } 
+                        <div className={(this.props.lengthColorToggle || this.props.lengthStatus) ? "LengthOverOn" : "Image1"}
                             onClick={this.props.legthStatus}
                             onMouseOver={this.props.lengthColorToggles}
-                            onMouseLeave = {this.props.lengthColorOffToggles}
-                            >
-                            {this.props.lengthStatus || this.props.lengthColorToggle?
-                                <div >
-                                <img src={Length2} className="Length1" />
-                                </div>
+                            onMouseLeave={this.props.lengthColorOffToggles}
+                        >
+                            {this.props.lengthStatus || this.props.lengthColorToggle ?
+
+                                <img src={Length2} className="Length1" alt="length"/>
+
                                 :
-                                <div >
-                                <img src={Length1} className="Length1" />
-                                </div>
+
+                                <img src={Length1} className="Length1" alt="length"/>
+
                             }
-                            <div className={this.props.lengthStatus || this.props.lengthColorToggle?"LengthColor":"Length"}>Length</div>
+                            <div className={this.props.lengthStatus || this.props.lengthColorToggle ? "LengthColor" : "Length"}>Length</div>
                         </div>
-                        <div className={this.props.volumeColorToggle || this.props.temperatureStatus ?"TempOverOn":"Image2"} 
+                        <div className={this.props.volumeColorToggle || this.props.temperatureStatus ? "TempOverOn" : "Image2"}
                             onClick={this.props.temperatureStatu}
                             onMouseOver={this.props.volumeColorToggles}
-                            onMouseLeave ={this.props.volumeColorOffToggles}
-                            >
-                            { this.props.temperatureStatus || this.props.volumeColorToggle?
+                            onMouseLeave={this.props.volumeColorOffToggles}
+                        >
+                            {this.props.temperatureStatus || this.props.volumeColorToggle ?
                                 <div>
-                                <img src={Temp2} className="Temp1" />
+                                    <img src={Temp2} className="Temp1" alt="temperature"/>
                                 </div>
                                 :
                                 <div>
-                                <img src={Temp1} className="Temp1" />
+                                    <img src={Temp1} className="Temp1" alt="temperature"/>
                                 </div>
                             }
-                            <div className={this.props.temperatureStatus || this.props.volumeColorToggle?"TemperatureColor":"Temperature"}>Temperature</div>
+                            <div className={this.props.temperatureStatus || this.props.volumeColorToggle ? "TemperatureColor" : "Temperature"}>Temperature</div>
                         </div>
-                        <div className={this.props.temperatureColorToggle || this.props.volumeStatus ?"VolumeOverOn":"Image3"} 
+                        <div className={this.props.temperatureColorToggle || this.props.volumeStatus ? "VolumeOverOn" : "Image3"}
                             onClick={this.props.volumeStatu}
                             onMouseOver={this.props.temperatureColorToggles}
-                            onMouseLeave = {this.props.temperatureColorOffToggles}>
-                            { this.props.volumeStatus || this.props.temperatureColorToggle?
+                            onMouseLeave={this.props.temperatureColorOffToggles}>
+                            {this.props.volumeStatus || this.props.temperatureColorToggle ?
                                 <div>
-                                <img src={Volume1} className="Volume1" />
+                                    <img src={Volume1} className="Volume1" alt="volume"/>
                                 </div>
                                 :
                                 <div>
-                                <img src={Volume2} className="Volume1" />
+                                    <img src={Volume2} className="Volume1" alt="volume"/>
                                 </div>
                             }
-                            <div className={this.props.volumeStatus || this.props.temperatureColorToggle?"VolumeColor":"Volume"}>Volume</div>
+                            <div className={this.props.volumeStatus || this.props.temperatureColorToggle ? "VolumeColor" : "Volume"}>Volume</div>
                         </div>
                     </div>
                 </div>

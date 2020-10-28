@@ -1,7 +1,7 @@
 .FromContainer{
     //border: 1px solid #000;
     height : 100px;
-    width: 19%;
+    width: 300px;
     margin: 0 15px 15px 0%;
     border-radius: 5px;
     //background-color: #fff;
@@ -10,7 +10,7 @@
 .ToContainer {
     //border: 1px solid #000;
     height : 100px;
-    width: 19%;
+    width: 300px;
     margin: 0 15px 15px 15px;
     border-radius: 2px;
     //background-color: #fff;
@@ -30,16 +30,18 @@
 
 .CounterTitle{
     display: flex;
-    justify-content: space-around ;
+    justify-content: space-between;
     //justify-content: center;
 }
 
 .From{
-    margin-left: 20%;
+    margin-left: auto;
+    //margin-right: 10%;
 }
 
 .To{
-    margin-right: 39%;
+    margin-right: 48%;
+    margin-left: 19%;
 }
 
 .FirstInput{
@@ -66,4 +68,27 @@
     width: 100%;
     height: 50px;
     //border: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 580px) {
+    .MainCounterContainer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .CounterTitle{
+        display: none;
+    }
+
+    .CounterContainer{
+        flex-direction: column;
+    }
+
+    .ToContainer{
+        margin: 0 15px 15px 15px;
+    }
+
+    .FromContainer{
+        margin: 0 15px 15px 15px;
+    }
 }

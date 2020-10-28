@@ -39,9 +39,8 @@
 
 .SelectorSection{
     background: #f0f5f5;
-    height: 562px;
+    height: 584px;
     width: 100%;
-
 }
 
 .ImageTitle{
@@ -57,9 +56,23 @@
 }
 
 .ChooseType{
+    display: flex;
+    align-items: left;
     font-weight: 500;
     padding-top: 05%;
-    margin-right: 0%;
-      
-  
+
+}
+
+@media only screen and (max-width: 580px) {
+    .subTitle{
+        margin: auto;
+        font-size: 20px;
+        font-weight: 300;
+        color : #fff;
+        justify-content:center;
+    }
+    
+    .SelectorSection{
+        height: 100%;
+    }
 }

@@ -120,3 +120,74 @@ font-weight: 600;
 .getDataNote{
     display : flex;
 }
+
+@media screen and (max-width: 950px) {
+
+    .Index, .MeasurementType, .conversionType, .InputNumber , .Result{
+        font-size : 15px;
+         font-weight: 500;
+
+    }
+
+    .Index1 , .MeasurementType1 , .conversionType1, .InputNumber1 , .Result1{
+        font-size: small;
+        font-weight: 500;
+        height: fit-content;
+    }
+
+    .Back {
+        width: 58px;
+        height: 40px;
+        margin: 3px 0 0 10px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and ( min-width: 462px) {
+
+    .Index, .MeasurementType, .conversionType, .InputNumber , .Result{
+        font-size : 15px;
+         font-weight: 500;
+
+    }
+
+    .Index1 , .MeasurementType1 , .conversionType1, .InputNumber1 , .Result1{
+        font-size: small;
+        font-weight: 500;
+        height: fit-content;
+    }
+
+    .Back {
+        width: 58px;
+        height: 40px;
+        margin: 3px 0 0 10px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 462px) {
+
+    .Index, .MeasurementType, .conversionType, .InputNumber , .Result{
+        font-size : 10px;
+         font-weight: 500;
+         flex-direction: wrap;
+    }
+
+    .Index1 , .MeasurementType1 , .conversionType1, .InputNumber1 , .Result1{
+        font-size: small;
+        font-weight: 500;
+        height: fit-content;
+        display: flex;
+        flex-direction: wrap;
+    }
+
+    .Back {
+        width: 58px;
+        height: 40px;
+        margin: 3px 0 0 10px;
+        font-size: 15px;
+    }
+
+}

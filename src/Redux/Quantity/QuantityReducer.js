@@ -21,12 +21,12 @@ const initialState = {
     FirstInput : 1,
     SecondInput : 1,
     FirstValue : 'Inch',
-    SecondValue : 'Inch',
+    SecondValue : 'Feet',
     unit1: ['Inch', 'Feet', 'Yard', 'Centimeter'],
     unit2: ['Celsius', 'Fahrenheit','Kelvin'],
     unit3: ['Liter', 'Gallon', 'MilliLiter'],
     options : ['Inch', 'Feet', 'Yard', 'Centimeter'],
-    measurementType : ''
+    measurementType : 'length'
 }
  
 const quantityReducer = (state = initialState, action) => {
@@ -34,6 +34,12 @@ const quantityReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case LENGTH:
+
+            // if ( state.measurementType === '' ) {
+            //     state.measurementType = 'length'
+            // } else {
+            //     state.measurementType = ''
+            // }
 
             return {
                 ...state,
@@ -47,10 +53,16 @@ const quantityReducer = (state = initialState, action) => {
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
                 options : state.unit1,
-                measurementType : 'length',
+                measurementType : 'length'
             }
 
         case VOLUME:
+
+            // if ( state.measurementType === '' ) {
+            //     state.measurementType = 'volume'
+            // } else {
+            //     state.measurementType = ''
+            // }
 
             return {
                 ...state,
@@ -64,10 +76,16 @@ const quantityReducer = (state = initialState, action) => {
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
                 options : state.unit3,
-                measurementType : 'volume',
+                measurementType : 'volume'
             }
 
         case TEMPERATURE:
+
+            // if ( state.measurementType === '' ) {
+            //     state.measurementType = 'temperature'
+            // } else {
+            //     state.measurementType = ''
+            // }    
 
             return {
                 ...state,
@@ -81,7 +99,7 @@ const quantityReducer = (state = initialState, action) => {
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
                 options : state.unit2,
-                measurementType : 'temperature',
+                measurementType : 'temperature'
             }
 
         case LENGTHTOGGLE:

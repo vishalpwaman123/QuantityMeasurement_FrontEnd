@@ -18,13 +18,14 @@ class Counter extends React.Component {
         this.state = {
             FirstInput: 1,
             SecondInput: 1,
-            Result : '1'
+            Result : 1
         }
     }
 
     getNotes() {
 
         let values = this.props.FirstValue + 'To' + this.props.SecondValue;
+        console.log("measurementType :", this.props.measurementType);
         if(!(this.props.measurementType === '')){
         const data = {
             measurementType: this.props.measurementType,
@@ -75,8 +76,6 @@ class Counter extends React.Component {
 
     render() {
         let Option = this.props.options;
-        // console.log("First", this.props.FirstValue);
-        // console.log("Second", this.props.SecondValue);
 
         return (
             <div>
@@ -125,7 +124,7 @@ class Counter extends React.Component {
                                     size="lg">
                                     <FormControl
                                         aria-label="Large"
-                                        value={this.state.Result}
+                                        Value={this.state.Result}
                                         //onChange={this.handleSecondValue}
                                         aria-describedby="inputGroup-sizing-sm"
                                         className="SecondInput" />
