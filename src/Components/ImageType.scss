@@ -138,6 +138,30 @@
     }
 }
 
+.Image4{
+    height: 137px;
+    width: 173px;
+    //border: 1px solid #000;
+    margin: 10px 15px 15px 15px;
+    border-radius: 5%;
+    background-color: #fff;
+}
+
+.WeightOverOn{
+    height: 137px;
+    width: 173px;
+    border: 1px solid #fde615;
+    margin: 10px 15px 15px 15px;
+    border-radius: 15%;
+    //background-color: #fff;
+    background-color: #f8f6d3;
+    //border-radius: 7px;
+    box-sizing: border-box;
+    animation-name: VolumeAnimation;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
 .ImageContainer{
     display: flex;
     margin-left: 0%;
@@ -148,7 +172,7 @@
     margin-bottom: 5%;
 }
 
-.Temp1{
+.Temp1 , .Weight1{
     margin-top: 20%;
     height:38%;
     margin-bottom: 3%;
@@ -159,7 +183,7 @@
     margin-bottom: 5%;
 }
 
-.Length{
+.Length , .Weight{
     color: lightgray;
 }
 
@@ -186,6 +210,11 @@
     color: #7224FF;
 }
 
+.WeightColor{
+    font-weight: 500;
+    color: #46fd21;
+}
+
 @media only screen and (max-width: 580px) {
     .ImageContainer{
         //display: flex;
@@ -202,12 +231,12 @@
         width: 100px;
     }
 
-    .Image3{
+    .Image3 , .Image4{
         height: 100px;
         width: 100px;
     }
 
-    .LengthOverOn {
+    .LengthOverOn , .WeightOverOn {
         height: 100px;
         width: 100px;
 

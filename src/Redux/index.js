@@ -1,11 +1,14 @@
 export {legthStatus} from './Quantity/QuantityAction';
 export {volumeStatus} from './Quantity/QuantityAction';
 export {temperatureStatus} from './Quantity/QuantityAction';
+export {weightStatus} from './Quantity/QuantityAction';
 export {lengthColorToggle} from './Quantity/QuantityAction';
 export {volumeColorToggle} from './Quantity/QuantityAction';
 export {temperatureColorToggle} from './Quantity/QuantityAction';
+export {weightColorToggle} from './Quantity/QuantityAction';
 export {lengthColorOffToggle} from './Quantity/QuantityAction';
 export {volumeColorOffToggle} from './Quantity/QuantityAction';
 export {temperatureColorOffToggle} from './Quantity/QuantityAction';
+export {weightColorOffToggle} from './Quantity/QuantityAction';
 export { FirstFunction } from './Quantity/QuantityAction';
 export { SecondFunction } from './Quantity/QuantityAction';

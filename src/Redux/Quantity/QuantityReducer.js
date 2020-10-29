@@ -2,33 +2,41 @@
 import { LENGTH } from './QuantityType'
 import { VOLUME } from './QuantityType'
 import { TEMPERATURE } from './QuantityType'
+import { WEIGHT } from './QuantityType'
 import { FIRSTFUNCTION } from './QuantityType'
 import { SECONDFUNCTION } from './QuantityType'
 import { LENGTHTOGGLE } from './QuantityType'
 import { VOLUMETOGGLE } from './QuantityType'
 import { TEMPERATURETOGGLE } from './QuantityType'
+import { WEIGHTTOGGLE } from './QuantityType'
 import { LENGTHTOGGLEOFF } from './QuantityType'
 import { VOLUMETOGGLEOFF } from './QuantityType'
 import { TEMPERATURETOGGLEOFF } from './QuantityType'
- 
+import { WEIGHTTOGGLEOFF } from './QuantityType'
+
 const initialState = {
     lengthStatus: true,
     volumeStatus: false,
     temperatureStatus: false,
+    weightStatus: false,
     lengthColorToggle: false,
     volumeColorToggle: false,
     temperatureColorToggle: false,
-    FirstInput : 1,
-    SecondInput : 1,
-    FirstValue : 'Inch',
-    SecondValue : 'Feet',
+    weightColorToggle: false,
+    FirstInput: 1,
+    SecondInput: 1,
+    FirstValue: 'Inch',
+    SecondValue: 'Feet',
     unit1: ['Inch', 'Feet', 'Yard', 'Centimeter'],
-    unit2: ['Celsius', 'Fahrenheit','Kelvin'],
+    unit2: ['Celsius', 'Fahrenheit', 'Kelvin'],
     unit3: ['Liter', 'Gallon', 'MilliLiter'],
-    options : ['Inch', 'Feet', 'Yard', 'Centimeter'],
-    measurementType : 'length'
+    unit4: ['Kilogram', 'Gram', 'Tonne'],
+    options: ['Inch', 'Feet', 'Yard', 'Centimeter'],
+    measurementType: 'length'
 }
- 
+
+
+
 const quantityReducer = (state = initialState, action) => {
 
     switch (action.type) {
@@ -43,17 +51,19 @@ const quantityReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                SecondInput : 1,
-                FirstValue : 'Inch',
-                SecondValue : 'Inch',
+                SecondInput: 1,
+                FirstValue: 'Inch',
+                SecondValue: 'Inch',
                 lengthStatus: !state.lengthStatus,
                 volumeStatus: false,
                 temperatureStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
-                options : state.unit1,
-                measurementType : 'length'
+                weightStatus: false,
+                weightColorToggle: false,
+                options: state.unit1,
+                measurementType: 'length'
             }
 
         case VOLUME:
@@ -66,17 +76,19 @@ const quantityReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                SecondInput : 1,
-                FirstValue : 'Liter',
-                SecondValue : 'Liter',
+                SecondInput: 1,
+                FirstValue: 'Liter',
+                SecondValue: 'Liter',
                 volumeStatus: !state.volumeStatus,
                 lengthStatus: false,
                 temperatureStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
-                options : state.unit3,
-                measurementType : 'volume'
+                weightStatus: false,
+                weightColorToggle: false,
+                options: state.unit3,
+                measurementType: 'volume'
             }
 
         case TEMPERATURE:
@@ -89,17 +101,44 @@ const quantityReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                SecondInput : 1,
-                FirstValue : 'Celsius',
-                SecondValue : 'Celsius',
+                SecondInput: 1,
+                FirstValue: 'Celsius',
+                SecondValue: 'Celsius',
                 temperatureStatus: !state.temperatureStatus,
                 lengthStatus: false,
                 volumeStatus: false,
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
-                options : state.unit2,
-                measurementType : 'temperature'
+                weightStatus: false,
+                weightColorToggle: false,
+                options: state.unit2,
+                measurementType: 'temperature'
+            }
+
+        case WEIGHT:
+
+            // if ( state.measurementType === '' ) {
+            //     state.measurementType = 'temperature'
+            // } else {
+            //     state.measurementType = ''
+            // }    
+
+            return {
+                ...state,
+                SecondInput: 1,
+                FirstValue: 'Kilogram',
+                SecondValue: 'Gram',
+                temperatureStatus: false,
+                lengthStatus: false,
+                volumeStatus: false,
+                lengthColorToggle: false,
+                volumeColorToggle: false,
+                temperatureColorToggle: false,
+                weightStatus: !state.weightStatus,
+                weightColorToggle: false,
+                options: state.unit4,
+                measurementType: 'weight'
             }
 
         case LENGTHTOGGLE:
@@ -109,6 +148,7 @@ const quantityReducer = (state = initialState, action) => {
                 lengthColorToggle: true,
                 volumeColorToggle: false,
                 temperatureColorToggle: false,
+                weightColorToggle: false,
             }
 
         case VOLUMETOGGLE:
@@ -118,6 +158,7 @@ const quantityReducer = (state = initialState, action) => {
                 lengthColorToggle: false,
                 volumeColorToggle: true,
                 temperatureColorToggle: false,
+                weightColorToggle: false,
             }
 
         case TEMPERATURETOGGLE:
@@ -127,49 +168,74 @@ const quantityReducer = (state = initialState, action) => {
                 lengthColorToggle: false,
                 volumeColorToggle: false,
                 temperatureColorToggle: true,
+                weightColorToggle: false,
             }
 
-            case LENGTHTOGGLEOFF:
+        case WEIGHTTOGGLE:
 
-                return {
-                    ...state,
-                    lengthColorToggle: false,
-                    volumeColorToggle: false,
-                    temperatureColorToggle: false,
-                }
-    
-            case VOLUMETOGGLEOFF:
+            return {
+                ...state,
+                lengthColorToggle: false,
+                volumeColorToggle: false,
+                temperatureColorToggle: false,
+                weightColorToggle: true,
+            }
 
-                return {
-                    ...state,
+        case LENGTHTOGGLEOFF:
 
-                    lengthColorToggle: false,
-                    volumeColorToggle: false,
-                    temperatureColorToggle: false,
-                }
-    
-            case TEMPERATURETOGGLEOFF:
+            return {
+                ...state,
+                lengthColorToggle: false,
+                volumeColorToggle: false,
+                temperatureColorToggle: false,
+                weightColorToggle: false,
+            }
 
-                return {
-                    ...state,
+        case VOLUMETOGGLEOFF:
 
-                    lengthColorToggle: false,
-                    volumeColorToggle: false,
-                    temperatureColorToggle: false,
-                }
+            return {
+                ...state,
 
-             case FIRSTFUNCTION :
-                 return {
-                     ...state,
-                    FirstValue : action.values,
-                 }   
+                lengthColorToggle: false,
+                volumeColorToggle: false,
+                temperatureColorToggle: false,
+                weightColorToggle: false,
+            }
 
-             case SECONDFUNCTION :
-                    return {
-                        ...state,
-                        SecondValue : action.values
-                    }   
-                    
+        case TEMPERATURETOGGLEOFF:
+
+            return {
+                ...state,
+
+                lengthColorToggle: false,
+                volumeColorToggle: false,
+                temperatureColorToggle: false,
+                weightColorToggle: false,
+            }
+
+        case TEMPERATURETOGGLEOFF:
+
+            return {
+                ...state,
+
+                lengthColorToggle: false,
+                volumeColorToggle: false,
+                temperatureColorToggle: false,
+                weightColorToggle: false,
+            }
+
+        case FIRSTFUNCTION:
+            return {
+                ...state,
+                FirstValue: action.values,
+            }
+
+        case SECONDFUNCTION:
+            return {
+                ...state,
+                SecondValue: action.values
+            }
+
 
         default: return state;
 

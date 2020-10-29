@@ -25,7 +25,7 @@ class Counter extends React.Component {
     getNotes() {
 
         let values = this.props.FirstValue + 'To' + this.props.SecondValue;
-        console.log("measurementType :", this.props.measurementType);
+        console.log("measurementType and value :", this.props.measurementType , values);
         if(!(this.props.measurementType === '')){
         const data = {
             measurementType: this.props.measurementType,

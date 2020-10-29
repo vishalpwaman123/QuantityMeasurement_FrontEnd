@@ -1,14 +1,17 @@
 import {LENGTH} from './QuantityType'
 import {VOLUME} from './QuantityType'
 import {TEMPERATURE} from './QuantityType'
+import {WEIGHT} from './QuantityType'
 import {FIRSTFUNCTION} from './QuantityType'
 import {SECONDFUNCTION} from './QuantityType'
 import {LENGTHTOGGLE} from './QuantityType'
 import {VOLUMETOGGLE} from './QuantityType'
 import {TEMPERATURETOGGLE} from './QuantityType'
+import {WEIGHTTOGGLE} from './QuantityType'
 import {LENGTHTOGGLEOFF} from './QuantityType'
 import {VOLUMETOGGLEOFF} from './QuantityType'
 import {TEMPERATURETOGGLEOFF} from './QuantityType'
+import {WEIGHTTOGGLEOFF} from './QuantityType'
  
 export  const legthStatus = () => {
     return {
@@ -25,6 +28,12 @@ export  const volumeStatus = () => {
 export  const temperatureStatus = () => {
     return {
         type : TEMPERATURE
+    }
+}
+
+export  const weightStatus = () => {
+    return {
+        type : WEIGHT
     }
 }
 
@@ -61,6 +70,12 @@ export  const temperatureColorToggle = () => {
     }
 }
 
+export  const weightColorToggle = () => {
+    return {
+        type : WEIGHTTOGGLE
+    }
+}
+
 export  const lengthColorOffToggle = () => {
     return {
         type : LENGTHTOGGLEOFF
@@ -76,5 +91,11 @@ export  const volumeColorOffToggle = () => {
 export  const temperatureColorOffToggle = () => {
     return {
         type : TEMPERATURETOGGLEOFF
+    }
+}
+
+export  const weightColorOffToggle = () => {
+    return {
+        type : WEIGHTTOGGLEOFF
     }
 }

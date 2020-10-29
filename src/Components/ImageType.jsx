@@ -6,16 +6,21 @@ import Volume1 from '../Asserts/Volume1.png'
 import Volume2 from '../Asserts/Volume2.png'
 import Temp1 from '../Asserts/Temp1.png'
 import Temp2 from '../Asserts/Temp2.png'
+import Weight1 from '../Asserts/Kg1.png'
+import Weight2 from '../Asserts/Kg2.png'
 import { legthStatus } from '../Redux';
 import { volumeStatus } from '../Redux';
 import { temperatureStatus } from '../Redux';
+import { weightStatus } from '../Redux';
 import { connect } from 'react-redux';
 import { lengthColorToggle } from '../Redux'
 import { volumeColorToggle } from '../Redux';
 import { temperatureColorToggle } from '../Redux';
+import { weightColorToggle } from '../Redux';
 import { lengthColorOffToggle } from '../Redux'
 import { volumeColorOffToggle } from '../Redux';
 import { temperatureColorOffToggle } from '../Redux';
+import { weightColorOffToggle } from '../Redux';
 
 class ImageType extends React.Component {
 
@@ -73,6 +78,21 @@ class ImageType extends React.Component {
                             }
                             <div className={this.props.volumeStatus || this.props.temperatureColorToggle ? "VolumeColor" : "Volume"}>Volume</div>
                         </div>
+                        <div className={this.props.weightColorToggle || this.props.weightStatus ? "WeightOverOn" : "Image4"}
+                            onClick={this.props.weightStatu}
+                            onMouseOver={this.props.weightColorToggles}
+                            onMouseLeave={this.props.weightColorOffToggles}>
+                            {this.props.weightStatus || this.props.weightColorToggle ?
+                                <div>
+                                    <img src={Weight2} className="Weight1" alt="Weight"/>
+                                </div>
+                                :
+                                <div>
+                                    <img src={Weight1} className="Weight1" alt="Weight"/>
+                                </div>
+                            }
+                            <div className={this.props.weightStatus || this.props.weightColorToggle ? "WeightColor" : "Weight"}>Weight</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,9 +106,11 @@ const mapStateToProps = (state) => {
         lengthStatus: state.lengthStatus,
         volumeStatus: state.volumeStatus,
         temperatureStatus: state.temperatureStatus,
+        weightStatus: state.weightStatus,
         lengthColorToggle: state.lengthColorToggle,
         temperatureColorToggle: state.temperatureColorToggle,
         volumeColorToggle: state.volumeColorToggle,
+        weightColorToggle: state.weightColorToggle,
     }
 
 }
@@ -106,6 +128,9 @@ const mapDispatchToProps = (dispatch) => {
         temperatureStatu: function () {
             dispatch(temperatureStatus());
         },
+        weightStatu: function () {
+            dispatch(weightStatus());
+        },
         lengthColorToggles: function () {
             dispatch(lengthColorToggle());
         },
@@ -115,6 +140,9 @@ const mapDispatchToProps = (dispatch) => {
         temperatureColorToggles: function () {
             dispatch(temperatureColorToggle());
         },
+        weightColorToggles: function () {
+            dispatch(weightColorToggle());
+        },
         lengthColorOffToggles: function () {
             dispatch(lengthColorOffToggle());
         },
@@ -123,6 +151,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         temperatureColorOffToggles: function () {
             dispatch(temperatureColorOffToggle());
+        },
+        weightColorOffToggles: function () {
+            dispatch(weightColorOffToggle());
         }
     }
 }
